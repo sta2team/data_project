@@ -9,11 +9,11 @@ load_dotenv()
 API_KEY = os.getenv("YOUTUBE_API")
 
 # @@@@@@@ 찾을 키워드 입력하기 @@@@@@@
-keyword = "성수 맛집"
+keyword = "종로 맛집"
 publishedAfter = "2024-09-30T15:00:00Z"
 publishedBefore = "2025-09-30T14:59:59Z"
-order = "relevance"
-# order = "viewCount"
+# order = "relevance"
+order = "viewCount"
 
 def get_youtube_data(query, publishedAfter, publishedBefore, total_count=100, max_results=50, order="relevance", region_code="KR"):
     """
@@ -97,8 +97,17 @@ def get_youtube_data(query, publishedAfter, publishedBefore, total_count=100, ma
             print(f"API 요청 실패: {e}")
             break
     
-    # 최종 결과 구성 (API 응답의 pageInfo 값 사용)
+    # 최종 결과 구성 (params 정보 포함)
     result = {
+        "searchParams": {
+            "query": query,
+            "publishedAfter": publishedAfter,
+            "publishedBefore": publishedBefore,
+            "order": order,
+            "regionCode": region_code,
+            "requestedCount": total_count,
+            "maxResultsPerPage": max_results
+        },
         "kind": "youtube#searchListResponse",
         "regionCode": region_code,
         "pageInfo": {
