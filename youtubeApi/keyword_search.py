@@ -9,9 +9,13 @@ load_dotenv()
 API_KEY = os.getenv("YOUTUBE_API")
 
 # @@@@@@@ 찾을 키워드 입력하기 @@@@@@@
-keyword = "부천 맛집"
+keyword = "성수 맛집"
+publishedAfter = "2024-09-30T15:00:00Z"
+publishedBefore = "2025-09-30T14:59:59Z"
+order = "relevance"
+# order = "viewCount"
 
-def get_youtube_data(query, total_count=100, max_results=50, order="viewCount", region_code="KR"):
+def get_youtube_data(query, publishedAfter, publishedBefore, total_count=100, max_results=50, order="relevance", region_code="KR"):
     """
     YouTube 검색 결과를 가져와서 JSON 파일로 저장
     
@@ -32,12 +36,16 @@ def get_youtube_data(query, total_count=100, max_results=50, order="viewCount", 
     all_items = []
     next_page_token = None
     total_fetched = 0
+    total_results_from_api = 0  # API에서 제공하는 totalResults
+    results_per_page_from_api = 0  # API에서 제공하는 resultsPerPage
     
     while total_fetched < total_count:
         params = {
             "key": API_KEY,
             "part": "snippet",
             "q": query,
+            "publishedAfter": publishedAfter,
+            "publishedBefore": publishedBefore,
             "type": "video",
             "maxResults": min(max_results, total_count - total_fetched),
             "order": order,
@@ -51,6 +59,12 @@ def get_youtube_data(query, total_count=100, max_results=50, order="viewCount", 
             response = requests.get(base_url, params=params)
             response.raise_for_status()
             data = response.json()
+            
+            # 첫 번째 요청에서 pageInfo 저장
+            if total_fetched == 0:
+                page_info = data.get("pageInfo", {})
+                total_results_from_api = page_info.get("totalResults", 0)
+                results_per_page_from_api = page_info.get("resultsPerPage", 0)
             
             # items에서 필요한 필드만 추출
             items = data.get("items", [])
@@ -83,13 +97,13 @@ def get_youtube_data(query, total_count=100, max_results=50, order="viewCount", 
             print(f"API 요청 실패: {e}")
             break
     
-    # 최종 결과 구성
+    # 최종 결과 구성 (API 응답의 pageInfo 값 사용)
     result = {
         "kind": "youtube#searchListResponse",
         "regionCode": region_code,
         "pageInfo": {
-            "totalResults": total_fetched,
-            "resultsPerPage": total_fetched
+            "totalResults": total_results_from_api,
+            "resultsPerPage": results_per_page_from_api
         },
         "items": all_items
     }
@@ -111,8 +125,10 @@ def get_youtube_data(query, total_count=100, max_results=50, order="viewCount", 
 if __name__ == "__main__":
     result = get_youtube_data(
         query=keyword,
+        publishedAfter = publishedAfter,
+        publishedBefore = publishedBefore,
         total_count=100,  # 총 100개 가져오기
         max_results=50,   # 한 번에 50개씩 (0-50 범위)
-        order="viewCount",
+        order= order,
         region_code="KR"
     )
