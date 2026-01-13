@@ -9,11 +9,15 @@ load_dotenv()
 API_KEY = os.getenv("YOUTUBE_API")
 
 # @@@@@@@ 찾을 키워드 입력하기 @@@@@@@
-keyword = "종로 맛집"
+keyword = "은평구 맛집"
 publishedAfter = "2024-09-30T15:00:00Z"
 publishedBefore = "2025-09-30T14:59:59Z"
 # order = "relevance"
 order = "viewCount"
+
+
+# 찾을 데이터 개수
+total_count = 100
 
 def get_youtube_data(query, publishedAfter, publishedBefore, total_count=100, max_results=50, order="relevance", region_code="KR"):
     """
@@ -119,7 +123,7 @@ def get_youtube_data(query, publishedAfter, publishedBefore, total_count=100, ma
     
     # 파일 저장
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    filename = f"youtube_{query.replace(' ', '_').replace('|', '_')}_{timestamp}.json"
+    filename = f"{query.replace(' ', '_').replace('|', '_')}_{timestamp}.json"
     
     with open(filename, 'w', encoding='utf-8') as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
@@ -136,7 +140,7 @@ if __name__ == "__main__":
         query=keyword,
         publishedAfter = publishedAfter,
         publishedBefore = publishedBefore,
-        total_count=100,  # 총 100개 가져오기
+        total_count=total_count,  # 총 100개 가져오기
         max_results=50,   # 한 번에 50개씩 (0-50 범위)
         order= order,
         region_code="KR"
