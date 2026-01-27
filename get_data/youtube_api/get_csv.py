@@ -128,6 +128,9 @@ def save_csv(items, district, folder_path):
 
     fieldnames = ["district", "id", "title", "publishedAt", "viewCount", "likeCount", "commentCount"]
 
+    # viewCount 기준 내림차순 정렬
+    sorted_items = sorted(items, key=lambda x: int(x.get('viewCount') or 0), reverse=True)
+
     with open(filename, 'w', encoding='utf-8-sig', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
