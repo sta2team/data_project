@@ -1,3 +1,7 @@
 .env
-/youtube_*.json
 /youtubeApi/data/
+
+
+# 테스트폴더
+/테스트
+/test_dasom
