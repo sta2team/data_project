@@ -1,0 +1,1141 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"
+    />
+
+    <meta
+      name="viewport"
+      content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <style>
+      #map_57b96460efc3ca797ddcbf8b52c459e6 {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        left: 0%;
+        top: 0%;
+      }
+      .leaflet-container {
+        font-size: 1rem;
+      }
+    </style>
+
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <style>
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+      }
+    </style>
+
+    <script>
+      L_NO_TOUCH = false;
+      L_DISABLE_3D = false;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet.fullscreen@3.0.0/Control.FullScreen.css"
+    />
+  </head>
+  <body>
+    <div class="folium-map" id="map_57b96460efc3ca797ddcbf8b52c459e6"></div>
+  </body>
+  <script>
+    var map_57b96460efc3ca797ddcbf8b52c459e6 = L.map(
+      'map_57b96460efc3ca797ddcbf8b52c459e6',
+      {
+        center: [37.55, 126.98],
+        crs: L.CRS.EPSG3857,
+        ...{
+          zoom: 12,
+          zoomControl: true,
+          preferCanvas: false,
+        },
+      },
+    );
+
+    var tile_layer_185c57d56106ed4fab6354a051d71708 = L.tileLayer(
+      'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',
+      {
+        minZoom: 0,
+        maxZoom: 20,
+        maxNativeZoom: 20,
+        noWrap: false,
+        attribution:
+          '\u0026copy; \u003ca href="https://www.openstreetmap.org/copyright"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href="https://carto.com/attributions"\u003eCARTO\u003c/a\u003e',
+        subdomains: 'abcd',
+        detectRetina: false,
+        tms: false,
+        opacity: 1,
+      },
+    );
+
+    tile_layer_185c57d56106ed4fab6354a051d71708.addTo(
+      map_57b96460efc3ca797ddcbf8b52c459e6,
+    );
+
+    var circle_marker_61681b046ca8b3724530898a1600521d = L.circleMarker(
+      [37.4766, 126.8872],
+      {
+        bubblingMouseEvents: true,
+        color: '#e74c3c',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#e74c3c',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_962b90dcc05b0af8660cd713c5ea7c0e = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_a2cad2366f39e4ad134de90918cfdfa3 = $(
+      `<div id="html_a2cad2366f39e4ad134de90918cfdfa3" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>가산동</b><br>                 X_Rank: 0.58<br>                 Y_Rank: 1.00<br>                 <hr>                 1사분면 (핵심)             </div></div>`,
+    )[0];
+    popup_962b90dcc05b0af8660cd713c5ea7c0e.setContent(
+      html_a2cad2366f39e4ad134de90918cfdfa3,
+    );
+
+    circle_marker_61681b046ca8b3724530898a1600521d.bindPopup(
+      popup_962b90dcc05b0af8660cd713c5ea7c0e,
+    );
+
+    circle_marker_61681b046ca8b3724530898a1600521d.bindTooltip(
+      `<div>
+                     가산동 (1사분면 (핵심))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_ee9679bc985def4e4bcf3abe72c89e36 = L.circleMarker(
+      [37.4851, 126.8943],
+      {
+        bubblingMouseEvents: true,
+        color: '#f1c40f',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#f1c40f',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_aa350ad44b3b7046c738d5b75ccd61fb = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_0c3a3b04f60bbd085e1a66e58afbb205 = $(
+      `<div id="html_0c3a3b04f60bbd085e1a66e58afbb205" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>구로3동</b><br>                 X_Rank: 0.42<br>                 Y_Rank: 0.74<br>                 <hr>                 2사분면 (잠재)             </div></div>`,
+    )[0];
+    popup_aa350ad44b3b7046c738d5b75ccd61fb.setContent(
+      html_0c3a3b04f60bbd085e1a66e58afbb205,
+    );
+
+    circle_marker_ee9679bc985def4e4bcf3abe72c89e36.bindPopup(
+      popup_aa350ad44b3b7046c738d5b75ccd61fb,
+    );
+
+    circle_marker_ee9679bc985def4e4bcf3abe72c89e36.bindTooltip(
+      `<div>
+                     구로3동 (2사분면 (잠재))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_4e7c7001d43cc7114298117b59e611a2 = L.circleMarker(
+      [37.5173, 127.0372],
+      {
+        bubblingMouseEvents: true,
+        color: '#95a5a6',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#95a5a6',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_72687a27ad470880dbdaa8057419e84f = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_d57c7e7e2934b1288f2efff280aefac1 = $(
+      `<div id="html_d57c7e7e2934b1288f2efff280aefac1" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>논현2동</b><br>                 X_Rank: 0.35<br>                 Y_Rank: 0.48<br>                 <hr>                 3사분면 (정체)             </div></div>`,
+    )[0];
+    popup_72687a27ad470880dbdaa8057419e84f.setContent(
+      html_d57c7e7e2934b1288f2efff280aefac1,
+    );
+
+    circle_marker_4e7c7001d43cc7114298117b59e611a2.bindPopup(
+      popup_72687a27ad470880dbdaa8057419e84f,
+    );
+
+    circle_marker_4e7c7001d43cc7114298117b59e611a2.bindTooltip(
+      `<div>
+                     논현2동 (3사분면 (정체))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_acb83f2f98021b25954de12bae11596e = L.circleMarker(
+      [37.4997, 127.0526],
+      {
+        bubblingMouseEvents: true,
+        color: '#e74c3c',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#e74c3c',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_d102205816bfa83f8a72f0b3ae1dd79f = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_93dad2ba35d60df5111c80d9f0c6a32b = $(
+      `<div id="html_93dad2ba35d60df5111c80d9f0c6a32b" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>대치4동</b><br>                 X_Rank: 0.76<br>                 Y_Rank: 0.52<br>                 <hr>                 1사분면 (핵심)             </div></div>`,
+    )[0];
+    popup_d102205816bfa83f8a72f0b3ae1dd79f.setContent(
+      html_93dad2ba35d60df5111c80d9f0c6a32b,
+    );
+
+    circle_marker_acb83f2f98021b25954de12bae11596e.bindPopup(
+      popup_d102205816bfa83f8a72f0b3ae1dd79f,
+    );
+
+    circle_marker_acb83f2f98021b25954de12bae11596e.bindTooltip(
+      `<div>
+                     대치4동 (1사분면 (핵심))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_42419b6418b65c7728b9e07738bc93da = L.circleMarker(
+      [37.4851, 127.1202],
+      {
+        bubblingMouseEvents: true,
+        color: '#3498db',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#3498db',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_b5d3226bf06f09e74232788163712d4c = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_d53281dc48499bce3c72eab1d2d68b87 = $(
+      `<div id="html_d53281dc48499bce3c72eab1d2d68b87" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>문정2동</b><br>                 X_Rank: 0.55<br>                 Y_Rank: 0.39<br>                 <hr>                 4사분면 (효율)             </div></div>`,
+    )[0];
+    popup_b5d3226bf06f09e74232788163712d4c.setContent(
+      html_d53281dc48499bce3c72eab1d2d68b87,
+    );
+
+    circle_marker_42419b6418b65c7728b9e07738bc93da.bindPopup(
+      popup_b5d3226bf06f09e74232788163712d4c,
+    );
+
+    circle_marker_42419b6418b65c7728b9e07738bc93da.bindTooltip(
+      `<div>
+                     문정2동 (4사분면 (효율))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_e14aeeff6067c0d2a21b5fa0d08f3759 = L.circleMarker(
+      [37.4831, 126.9934],
+      {
+        bubblingMouseEvents: true,
+        color: '#95a5a6',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#95a5a6',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_9e24802797be0dd4b7b4ea1de7eba89f = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_804a97c9d0ff951c7208066a2d8b30e4 = $(
+      `<div id="html_804a97c9d0ff951c7208066a2d8b30e4" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>방배1동</b><br>                 X_Rank: 0.44<br>                 Y_Rank: 0.04<br>                 <hr>                 3사분면 (정체)             </div></div>`,
+    )[0];
+    popup_9e24802797be0dd4b7b4ea1de7eba89f.setContent(
+      html_804a97c9d0ff951c7208066a2d8b30e4,
+    );
+
+    circle_marker_e14aeeff6067c0d2a21b5fa0d08f3759.bindPopup(
+      popup_9e24802797be0dd4b7b4ea1de7eba89f,
+    );
+
+    circle_marker_e14aeeff6067c0d2a21b5fa0d08f3759.bindTooltip(
+      `<div>
+                     방배1동 (3사분면 (정체))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_757ebc689ff3a7057eb3b34079a5d56a = L.circleMarker(
+      [37.5144, 127.0626],
+      {
+        bubblingMouseEvents: true,
+        color: '#e74c3c',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#e74c3c',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_f31da42ba8727912d21f6732bb1f0aa7 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_fcffce289a112f44df60b9b11706d3f6 = $(
+      `<div id="html_fcffce289a112f44df60b9b11706d3f6" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>삼성1동</b><br>                 X_Rank: 0.56<br>                 Y_Rank: 0.78<br>                 <hr>                 1사분면 (핵심)             </div></div>`,
+    )[0];
+    popup_f31da42ba8727912d21f6732bb1f0aa7.setContent(
+      html_fcffce289a112f44df60b9b11706d3f6,
+    );
+
+    circle_marker_757ebc689ff3a7057eb3b34079a5d56a.bindPopup(
+      popup_f31da42ba8727912d21f6732bb1f0aa7,
+    );
+
+    circle_marker_757ebc689ff3a7057eb3b34079a5d56a.bindTooltip(
+      `<div>
+                     삼성1동 (1사분면 (핵심))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_77cbe4b71a24bf57e872d7354caf1ce2 = L.circleMarker(
+      [37.5111, 127.0459],
+      {
+        bubblingMouseEvents: true,
+        color: '#f1c40f',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#f1c40f',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_6a85000e2d8022c289a7aba373a6cedb = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_80d458319141cf676ad36bbfa9bbaf3d = $(
+      `<div id="html_80d458319141cf676ad36bbfa9bbaf3d" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>삼성2동</b><br>                 X_Rank: 0.17<br>                 Y_Rank: 0.65<br>                 <hr>                 2사분면 (잠재)             </div></div>`,
+    )[0];
+    popup_6a85000e2d8022c289a7aba373a6cedb.setContent(
+      html_80d458319141cf676ad36bbfa9bbaf3d,
+    );
+
+    circle_marker_77cbe4b71a24bf57e872d7354caf1ce2.bindPopup(
+      popup_6a85000e2d8022c289a7aba373a6cedb,
+    );
+
+    circle_marker_77cbe4b71a24bf57e872d7354caf1ce2.bindTooltip(
+      `<div>
+                     삼성2동 (2사분면 (잠재))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_69693e5c05c4e5801b67f68244d55514 = L.circleMarker(
+      [37.5815, 126.886],
+      {
+        bubblingMouseEvents: true,
+        color: '#e74c3c',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#e74c3c',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_35e32e89787da85a8b74d606188a56a0 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_7ab8f02373fc55659d712d7f397c8192 = $(
+      `<div id="html_7ab8f02373fc55659d712d7f397c8192" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>상암동</b><br>                 X_Rank: 0.52<br>                 Y_Rank: 0.83<br>                 <hr>                 1사분면 (핵심)             </div></div>`,
+    )[0];
+    popup_35e32e89787da85a8b74d606188a56a0.setContent(
+      html_7ab8f02373fc55659d712d7f397c8192,
+    );
+
+    circle_marker_69693e5c05c4e5801b67f68244d55514.bindPopup(
+      popup_35e32e89787da85a8b74d606188a56a0,
+    );
+
+    circle_marker_69693e5c05c4e5801b67f68244d55514.bindTooltip(
+      `<div>
+                     상암동 (1사분면 (핵심))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_2bd9f5dc8e9748629d2f827d8f541c9d = L.circleMarker(
+      [37.5543, 126.9208],
+      {
+        bubblingMouseEvents: true,
+        color: '#e74c3c',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#e74c3c',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_5800d52dfbd697f71ed3131acccfa1e6 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_18007fb44e117f5d6af56d73799a4a10 = $(
+      `<div id="html_18007fb44e117f5d6af56d73799a4a10" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>서교동</b><br>                 X_Rank: 0.78<br>                 Y_Rank: 0.96<br>                 <hr>                 1사분면 (핵심)             </div></div>`,
+    )[0];
+    popup_5800d52dfbd697f71ed3131acccfa1e6.setContent(
+      html_18007fb44e117f5d6af56d73799a4a10,
+    );
+
+    circle_marker_2bd9f5dc8e9748629d2f827d8f541c9d.bindPopup(
+      popup_5800d52dfbd697f71ed3131acccfa1e6,
+    );
+
+    circle_marker_2bd9f5dc8e9748629d2f827d8f541c9d.bindTooltip(
+      `<div>
+                     서교동 (1사분면 (핵심))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_899c3b546ecc0cac8d22d18b6804171f = L.circleMarker(
+      [37.4877, 127.0315],
+      {
+        bubblingMouseEvents: true,
+        color: '#e74c3c',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#e74c3c',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_4e7c1450976597faa5cc81573348a8ae = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_b4a83cd14765583eba065d74bec75db7 = $(
+      `<div id="html_b4a83cd14765583eba065d74bec75db7" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>서초2동</b><br>                 X_Rank: 0.71<br>                 Y_Rank: 0.57<br>                 <hr>                 1사분면 (핵심)             </div></div>`,
+    )[0];
+    popup_4e7c1450976597faa5cc81573348a8ae.setContent(
+      html_b4a83cd14765583eba065d74bec75db7,
+    );
+
+    circle_marker_899c3b546ecc0cac8d22d18b6804171f.bindPopup(
+      popup_4e7c1450976597faa5cc81573348a8ae,
+    );
+
+    circle_marker_899c3b546ecc0cac8d22d18b6804171f.bindTooltip(
+      `<div>
+                     서초2동 (1사분면 (핵심))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_a2329ce40b04d48e66a4014e57ffb224 = L.circleMarker(
+      [37.4836, 127.0116],
+      {
+        bubblingMouseEvents: true,
+        color: '#3498db',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#3498db',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_796142e656d31ccb6fe6910bfbb910b0 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_de49a0b1ed2d5a5a5455bdab634154de = $(
+      `<div id="html_de49a0b1ed2d5a5a5455bdab634154de" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>서초3동</b><br>                 X_Rank: 0.56<br>                 Y_Rank: 0.26<br>                 <hr>                 4사분면 (효율)             </div></div>`,
+    )[0];
+    popup_796142e656d31ccb6fe6910bfbb910b0.setContent(
+      html_de49a0b1ed2d5a5a5455bdab634154de,
+    );
+
+    circle_marker_a2329ce40b04d48e66a4014e57ffb224.bindPopup(
+      popup_796142e656d31ccb6fe6910bfbb910b0,
+    );
+
+    circle_marker_a2329ce40b04d48e66a4014e57ffb224.bindTooltip(
+      `<div>
+                     서초3동 (4사분면 (효율))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_64d6e71b958505f30ca2fda16fef6d1f = L.circleMarker(
+      [37.5415, 127.0435],
+      {
+        bubblingMouseEvents: true,
+        color: '#e74c3c',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#e74c3c',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_9b0e6f1367ef8f9b09218cb35cc71484 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_ebcd7395a9235dfd87c74d20a630f501 = $(
+      `<div id="html_ebcd7395a9235dfd87c74d20a630f501" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>성수동</b><br>                 X_Rank: 0.93<br>                 Y_Rank: 0.61<br>                 <hr>                 1사분면 (핵심)             </div></div>`,
+    )[0];
+    popup_9b0e6f1367ef8f9b09218cb35cc71484.setContent(
+      html_ebcd7395a9235dfd87c74d20a630f501,
+    );
+
+    circle_marker_64d6e71b958505f30ca2fda16fef6d1f.bindPopup(
+      popup_9b0e6f1367ef8f9b09218cb35cc71484,
+    );
+
+    circle_marker_64d6e71b958505f30ca2fda16fef6d1f.bindTooltip(
+      `<div>
+                     성수동 (1사분면 (핵심))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_c6de8a191b4d4b1d165118311a7925f7 = L.circleMarker(
+      [37.5019, 127.1121],
+      {
+        bubblingMouseEvents: true,
+        color: '#95a5a6',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#95a5a6',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 16,
+        stroke: true,
+        weight: 4,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_3c41e7f44c4365404e7276b49cc791c6 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_551b69795694cef1f6653d2a45ee2d86 = $(
+      `<div id="html_551b69795694cef1f6653d2a45ee2d86" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>송파2동</b><br>                 X_Rank: 0.49<br>                 Y_Rank: 0.09<br>                 <hr>                 3사분면 (정체)             </div></div>`,
+    )[0];
+    popup_3c41e7f44c4365404e7276b49cc791c6.setContent(
+      html_551b69795694cef1f6653d2a45ee2d86,
+    );
+
+    circle_marker_c6de8a191b4d4b1d165118311a7925f7.bindPopup(
+      popup_3c41e7f44c4365404e7276b49cc791c6,
+    );
+
+    circle_marker_c6de8a191b4d4b1d165118311a7925f7.bindTooltip(
+      `<div>
+                     송파2동 (3사분면 (정체))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_138b86677d0579872c10efbffb208ad9 = L.circleMarker(
+      [37.5566, 127.0163],
+      {
+        bubblingMouseEvents: true,
+        color: '#95a5a6',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#95a5a6',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 16,
+        stroke: true,
+        weight: 4,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_4426d537a80ca767ac520110a95e59be = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_77694c0cc9f00647dcf602761b9b02fa = $(
+      `<div id="html_77694c0cc9f00647dcf602761b9b02fa" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>신당동</b><br>                 X_Rank: 0.48<br>                 Y_Rank: 0.35<br>                 <hr>                 3사분면 (정체)             </div></div>`,
+    )[0];
+    popup_4426d537a80ca767ac520110a95e59be.setContent(
+      html_77694c0cc9f00647dcf602761b9b02fa,
+    );
+
+    circle_marker_138b86677d0579872c10efbffb208ad9.bindPopup(
+      popup_4426d537a80ca767ac520110a95e59be,
+    );
+
+    circle_marker_138b86677d0579872c10efbffb208ad9.bindTooltip(
+      `<div>
+                     신당동 (3사분면 (정체))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_8eb9d27dedf092971f518fb01cd47eb7 = L.circleMarker(
+      [37.5303, 127.0305],
+      {
+        bubblingMouseEvents: true,
+        color: '#e74c3c',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#e74c3c',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_008ee11b5a701a7fbdb47b2b9ec41478 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_c9f223312f536a850cc41c2ab7937d6a = $(
+      `<div id="html_c9f223312f536a850cc41c2ab7937d6a" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>압구정동</b><br>                 X_Rank: 0.59<br>                 Y_Rank: 0.87<br>                 <hr>                 1사분면 (핵심)             </div></div>`,
+    )[0];
+    popup_008ee11b5a701a7fbdb47b2b9ec41478.setContent(
+      html_c9f223312f536a850cc41c2ab7937d6a,
+    );
+
+    circle_marker_8eb9d27dedf092971f518fb01cd47eb7.bindPopup(
+      popup_008ee11b5a701a7fbdb47b2b9ec41478,
+    );
+
+    circle_marker_8eb9d27dedf092971f518fb01cd47eb7.bindTooltip(
+      `<div>
+                     압구정동 (1사분면 (핵심))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_fac6e66ee5e1042fb6c30321b4de63e3 = L.circleMarker(
+      [37.5381, 126.892],
+      {
+        bubblingMouseEvents: true,
+        color: '#95a5a6',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#95a5a6',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 16,
+        stroke: true,
+        weight: 4,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_654133bb650f584c33951038a4e92235 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_8beb1bab8d11bb4c50961f44a44585d1 = $(
+      `<div id="html_8beb1bab8d11bb4c50961f44a44585d1" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>양평2동</b><br>                 X_Rank: 0.48<br>                 Y_Rank: 0.13<br>                 <hr>                 3사분면 (정체)             </div></div>`,
+    )[0];
+    popup_654133bb650f584c33951038a4e92235.setContent(
+      html_8beb1bab8d11bb4c50961f44a44585d1,
+    );
+
+    circle_marker_fac6e66ee5e1042fb6c30321b4de63e3.bindPopup(
+      popup_654133bb650f584c33951038a4e92235,
+    );
+
+    circle_marker_fac6e66ee5e1042fb6c30321b4de63e3.bindTooltip(
+      `<div>
+                     양평2동 (3사분면 (정체))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_0299ddd487d39e705031bf841c71bfff = L.circleMarker(
+      [37.5244, 126.9317],
+      {
+        bubblingMouseEvents: true,
+        color: '#e74c3c',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#e74c3c',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_0c113a51cb24de974ef233095ccc79f4 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_eac434a61c42126388274c75331c7907 = $(
+      `<div id="html_eac434a61c42126388274c75331c7907" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>여의동</b><br>                 X_Rank: 0.64<br>                 Y_Rank: 0.91<br>                 <hr>                 1사분면 (핵심)             </div></div>`,
+    )[0];
+    popup_0c113a51cb24de974ef233095ccc79f4.setContent(
+      html_eac434a61c42126388274c75331c7907,
+    );
+
+    circle_marker_0299ddd487d39e705031bf841c71bfff.bindPopup(
+      popup_0c113a51cb24de974ef233095ccc79f4,
+    );
+
+    circle_marker_0299ddd487d39e705031bf841c71bfff.bindTooltip(
+      `<div>
+                     여의동 (1사분면 (핵심))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_eb4addc768c378f7b03e91532e20f31b = L.circleMarker(
+      [37.5463, 126.9458],
+      {
+        bubblingMouseEvents: true,
+        color: '#95a5a6',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#95a5a6',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_f45f5bad54de629fe80a87445d29c902 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_7286eb53fdac17b0c395798b7c6d8462 = $(
+      `<div id="html_7286eb53fdac17b0c395798b7c6d8462" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>염리동</b><br>                 X_Rank: 0.45<br>                 Y_Rank: 0.22<br>                 <hr>                 3사분면 (정체)             </div></div>`,
+    )[0];
+    popup_f45f5bad54de629fe80a87445d29c902.setContent(
+      html_7286eb53fdac17b0c395798b7c6d8462,
+    );
+
+    circle_marker_eb4addc768c378f7b03e91532e20f31b.bindPopup(
+      popup_f45f5bad54de629fe80a87445d29c902,
+    );
+
+    circle_marker_eb4addc768c378f7b03e91532e20f31b.bindTooltip(
+      `<div>
+                     염리동 (3사분면 (정체))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_2d057999eecfebdd270be8663ccfcd6e = L.circleMarker(
+      [37.5413, 126.9408],
+      {
+        bubblingMouseEvents: true,
+        color: '#3498db',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#3498db',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_7c70ff926c70c6e4ce1e3b120ddcd1d9 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_0c0b4d8f7523cb6789af506f460c408d = $(
+      `<div id="html_0c0b4d8f7523cb6789af506f460c408d" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>용강동</b><br>                 X_Rank: 0.57<br>                 Y_Rank: 0.30<br>                 <hr>                 4사분면 (효율)             </div></div>`,
+    )[0];
+    popup_7c70ff926c70c6e4ce1e3b120ddcd1d9.setContent(
+      html_0c0b4d8f7523cb6789af506f460c408d,
+    );
+
+    circle_marker_2d057999eecfebdd270be8663ccfcd6e.bindPopup(
+      popup_7c70ff926c70c6e4ce1e3b120ddcd1d9,
+    );
+
+    circle_marker_2d057999eecfebdd270be8663ccfcd6e.bindTooltip(
+      `<div>
+                     용강동 (4사분면 (효율))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_ad178163f469512f5ad2ede827f7636b = L.circleMarker(
+      [37.5595, 126.9672],
+      {
+        bubblingMouseEvents: true,
+        color: '#95a5a6',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#95a5a6',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_fc5b75baaaaef0bf2d4c3a0d4b9f5f94 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_11dc3fc7f7b2b992e0545b0212de6de6 = $(
+      `<div id="html_11dc3fc7f7b2b992e0545b0212de6de6" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>중림동</b><br>                 X_Rank: 0.13<br>                 Y_Rank: 0.17<br>                 <hr>                 3사분면 (정체)             </div></div>`,
+    )[0];
+    popup_fc5b75baaaaef0bf2d4c3a0d4b9f5f94.setContent(
+      html_11dc3fc7f7b2b992e0545b0212de6de6,
+    );
+
+    circle_marker_ad178163f469512f5ad2ede827f7636b.bindPopup(
+      popup_fc5b75baaaaef0bf2d4c3a0d4b9f5f94,
+    );
+
+    circle_marker_ad178163f469512f5ad2ede827f7636b.bindTooltip(
+      `<div>
+                     중림동 (3사분면 (정체))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_2afb49570100eb417f008f7fa7ab15d3 = L.circleMarker(
+      [37.5251, 127.0492],
+      {
+        bubblingMouseEvents: true,
+        color: '#3498db',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#3498db',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_6cfd820965445494eb0a408e0d80ff7b = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_00b6e3ed1dfc085499b1268f771ca9d5 = $(
+      `<div id="html_00b6e3ed1dfc085499b1268f771ca9d5" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>청담동</b><br>                 X_Rank: 0.51<br>                 Y_Rank: 0.43<br>                 <hr>                 4사분면 (효율)             </div></div>`,
+    )[0];
+    popup_6cfd820965445494eb0a408e0d80ff7b.setContent(
+      html_00b6e3ed1dfc085499b1268f771ca9d5,
+    );
+
+    circle_marker_2afb49570100eb417f008f7fa7ab15d3.bindPopup(
+      popup_6cfd820965445494eb0a408e0d80ff7b,
+    );
+
+    circle_marker_2afb49570100eb417f008f7fa7ab15d3.bindTooltip(
+      `<div>
+                     청담동 (4사분면 (효율))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    var circle_marker_a769815ba24c790c2315ceb01fcd732c = L.circleMarker(
+      [37.5435, 126.9632],
+      {
+        bubblingMouseEvents: true,
+        color: '#f1c40f',
+        dashArray: null,
+        dashOffset: null,
+        fill: true,
+        fillColor: '#f1c40f',
+        fillOpacity: 0.7,
+        fillRule: 'evenodd',
+        lineCap: 'round',
+        lineJoin: 'round',
+        opacity: 1.0,
+        radius: 12,
+        stroke: true,
+        weight: 1,
+      },
+    ).addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+
+    var popup_74d522c9a0ce78e7683806d85934b7c8 = L.popup({
+      maxWidth: 200,
+    });
+
+    var html_7bb27a2148b38169ed9e92bfabdce044 = $(
+      `<div id="html_7bb27a2148b38169ed9e92bfabdce044" style="width: 100.0%; height: 100.0%;">             <div style='width:150px'>                 <b>효창동</b><br>                 X_Rank: 0.34<br>                 Y_Rank: 0.70<br>                 <hr>                 2사분면 (잠재)             </div></div>`,
+    )[0];
+    popup_74d522c9a0ce78e7683806d85934b7c8.setContent(
+      html_7bb27a2148b38169ed9e92bfabdce044,
+    );
+
+    circle_marker_a769815ba24c790c2315ceb01fcd732c.bindPopup(
+      popup_74d522c9a0ce78e7683806d85934b7c8,
+    );
+
+    circle_marker_a769815ba24c790c2315ceb01fcd732c.bindTooltip(
+      `<div>
+                     효창동 (2사분면 (잠재))
+                 </div>`,
+      {
+        sticky: true,
+      },
+    );
+
+    L.control
+      .fullscreen({
+        position: 'topleft',
+        title: 'Full Screen',
+        titleCancel: 'Exit Full Screen',
+        forceSeparateButton: false,
+      })
+      .addTo(map_57b96460efc3ca797ddcbf8b52c459e6);
+  </script>
+</html>
